@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - main
-      - master
   pull_request:
     branches:
       - main
-      - master
 
 jobs:
   ci:
@@ -17,19 +15,19 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
+        node: [16]
 
     steps:
-      - name: Checkout 🛎
+      - name: Checkout
         uses: actions/checkout@master
 
-      - name: Setup node env 🏗
+      - name: Setup node env
         uses: actions/setup-node@v2.1.5
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
 
-      - name: Cache node_modules 📦
+      - name: Cache node_modules
         uses: actions/cache@v2.1.4
         with:
           path: ~/.npm
@@ -37,11 +35,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install dependencies 👨🏻‍💻
+      - name: Install dependencies
         run: npm ci --prefer-offline --no-audit
 
-      - name: Run linter 👀
+      - name: Run linter
         run: npm run lint
 
-      - name: Run tests 🧪
+      - name: Run tests
         run: npm run test
+
+      - name: Run build
+        run: npm run build
