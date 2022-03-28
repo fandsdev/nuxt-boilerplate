@@ -1,10 +1,10 @@
 <script>
-const SVG_SPRITE_SELECTOR = '[data-svg-sprite]';
+const svgSpriteSelector = '[data-svg-sprite]';
 
 export default {
   computed: {
     availableIcons() {
-      const svgSprite = document.querySelector(SVG_SPRITE_SELECTOR);
+      const svgSprite = document.querySelector(svgSpriteSelector);
       if (!svgSprite) return [];
 
       return [...svgSprite.children].map((element) => element.id);
