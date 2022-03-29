@@ -2,8 +2,8 @@
 export const messages = {
   en: {
     navbar: 'Navbar',
-  }
-}
+   },
+};
 
 export default {
   i18n: { messages },
