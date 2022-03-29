@@ -5,7 +5,6 @@
     <div :class="$style.main">
       <Nuxt />
     </div>
-    <TheFooter />
   </div>
 </template>
 
