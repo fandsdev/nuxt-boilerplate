@@ -49,6 +49,7 @@ export default {
   build: {
     postcss: {
       plugins: {
+        'postcss-nesting': {},
         'postcss-custom-media': {
           importFrom: './assets/custom-media-variables.css',
         },
