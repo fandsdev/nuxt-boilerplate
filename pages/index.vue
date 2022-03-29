@@ -16,7 +16,7 @@ export default {
   </div>
 </template>
 
-<style module>
+<style lang="postcss" module>
 .root {
   display: flex;
   align-items: center;
