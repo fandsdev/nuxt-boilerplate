@@ -1,6 +1,18 @@
+<script>
+export const messages = {
+  en: {
+    greeting: 'Hello there 👋',
+  },
+};
+
+export default {
+  i18n: { messages },
+};
+</script>
+
 <template>
   <div :class="$style.root">
-    <div :class="$style.greeting">Hello there 👋</div>
+    <div :class="$style.greeting">{{ $t('greeting') }}</div>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
-import TheNavbar, { messages } from './the-navbar.vue';
 import { setupI18nInstanceForMessages } from '~/test/utils/setup-i18n-instance-for-messages';
+import TheNavbar, { messages } from './the-navbar.vue';
 
 const i18n = setupI18nInstanceForMessages(messages);
 
