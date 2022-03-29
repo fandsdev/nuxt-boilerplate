@@ -22,7 +22,6 @@ export default {
   </div>
 </template>
 
-
 <style lang="postcss" module>
 .root {
   display: grid;
