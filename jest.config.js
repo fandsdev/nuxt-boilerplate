@@ -15,4 +15,6 @@ module.exports = {
     '<rootDir>/pages/**/*.vue',
   ],
   testEnvironment: 'jsdom',
+  clearMocks: true,
+  resetMocks: true,
 };
