@@ -9,6 +9,13 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': '@vue/vue2-jest',
   },
+  globals: {
+    'vue-jest': {
+      transform: {
+        postcss: './test/vue-jest-custom-transformers/postcss-transformer.js',
+      },
+    },
+  },
   testEnvironment: 'jsdom',
   clearMocks: true,
   resetMocks: true,
