@@ -13,7 +13,7 @@ to: "components/<%= h.changeCase.kebab(name).toLowerCase().slice(0, 5) === 'base
 <% } else {
 %>import <%= importName %> from './<%= fileName %>.vue';<% }
 if (useI18n) {
-%>import { setupI18nInstanceForMessages } from '~/test/helpers/setup-i18n-instance-for-messages';
+%>import { setupI18nInstanceForMessages } from '~/test/utils/setup-i18n-instance-for-messages';
 
 const i18n = setupI18nInstanceForMessages(messages);<%
 } %>

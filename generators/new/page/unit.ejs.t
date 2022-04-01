@@ -10,7 +10,7 @@ to: "pages/<%= h.changeCase.kebab(name) %>.spec.js"
 <% } else {
 %>import <%= importName %> from './<%= fileName %>.vue';<% }
 if (useI18n) {
-%>import { setupI18nInstanceForMessages } from '~/test/helpers/setup-i18n-instance-for-messages';
+%>import { setupI18nInstanceForMessages } from '~/test/utils/setup-i18n-instance-for-messages';
 
 const i18n = setupI18nInstanceForMessages(messages);<%
 } %>
