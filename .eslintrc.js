@@ -67,6 +67,10 @@ module.exports = {
         patterns: ['../*', 'lodash.*'],
         paths: [
           {
+            name: 'lodash',
+            message: "Please import methods directly (like 'lodash/debounce').",
+          },
+          {
             name: '@vue/test-utils',
             importNames: ['mount'],
             message: 'Please use shallowMount instead.',
